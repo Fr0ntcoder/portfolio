@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import TypeWrite from '../../components/common/TypeWrite.vue'
+
 const showSecond = ref<boolean>(false)
 </script>
 
@@ -13,13 +14,13 @@ const showSecond = ref<boolean>(false)
 			class="bg-primary/80 absolute flex h-full w-full flex-col items-center justify-center"
 		>
 			<TypeWrite
-				text="Меня зовут Илья."
+				text="Привет! Меня зовут Илья"
 				@finished="showSecond = true"
 				:is-active-cursor="!showSecond"
 			/>
 			<TypeWrite
 				v-if="showSecond"
-				text="И я Frontend-разработчик"
+				text="И я Fullstack-разработчик"
 				:is-active-cursor="showSecond"
 			/>
 		</div>

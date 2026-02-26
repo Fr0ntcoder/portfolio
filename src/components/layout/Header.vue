@@ -7,7 +7,7 @@ import Container from '../ui/Container.vue'
 
 <template>
 	<header
-		class="text-primary-foreground sticky top-0 z-20 flex h-20 w-full items-center justify-between text-xl"
+		class="text-primary-foreground bg-primary/80 sticky top-0 z-20 flex h-20 w-full items-center justify-between text-xl"
 	>
 		<Container class="flex items-center justify-between">
 			<Logo />

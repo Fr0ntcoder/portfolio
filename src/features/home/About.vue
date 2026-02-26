@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-	<div class="h-screen py-20">
+	<div class="mb-20 pt-20">
 		<div class="grid grid-cols-3 gap-5">
 			<div
 				class="col-span-2 flex flex-col gap-5 text-xl"
@@ -10,7 +10,7 @@
 			>
 				<h2>Обо мне</h2>
 				<p>
-					Привет! Я фронтенд‑разработчик, создающий современные и удобные
+					Привет! Я fullstack‑разработчик, создающий современные и удобные
 					веб‑приложения. Мне нравится превращать дизайн в живой интерфейс,
 					который выглядит гармонично на любом устройстве и работает стабильно в
 					разных браузерах
@@ -38,7 +38,7 @@
 			</div>
 			<div class="col-span-1 overflow-hidden rounded">
 				<img
-					src="/public/profile-img.jpg"
+					src="/profile-img.jpg"
 					alt="Фото"
 					class="w-full"
 					data-aos="fade-left"
