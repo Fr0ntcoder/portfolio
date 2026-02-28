@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { ArrowDown } from 'lucide-vue-next'
 import { ref } from 'vue'
 import TypeWrite from '../../components/common/TypeWrite.vue'
-import { ArrowDown } from 'lucide-vue-next'
 
 const showSecond = ref<boolean>(false)
 </script>
@@ -25,7 +25,9 @@ const showSecond = ref<boolean>(false)
 				:is-active-cursor="showSecond"
 			/>
 		</div>
-		<div class="absolute bottom-10 left-0 flex w-full justify-center">
+		<div
+			class="absolute bottom-20 left-0 flex w-full justify-center sm:bottom-10"
+		>
 			<a
 				v-scroll-to="`#about`"
 				href="#about"

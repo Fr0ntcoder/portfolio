@@ -17,7 +17,7 @@ const { title, data } = defineProps<ISkillBlockProps>()
 			<li
 				v-for="item in data"
 				:key="item.title"
-				class="group relative cursor-pointer overflow-hidden rounded bg-white/10 p-2"
+				class="group relative cursor-pointer overflow-hidden rounded bg-white/20 p-2"
 			>
 				<Title :variant="4" class="mb-5">{{ item.title }}</Title>
 				<img :src="item.image" class="w-20" />
