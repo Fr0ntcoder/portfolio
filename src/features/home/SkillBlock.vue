@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Title from '../../components/ui/Title.vue'
+
 import { ISkillsData } from '../../types'
 
 interface ISkillBlockProps {
@@ -9,16 +11,16 @@ const { title, data } = defineProps<ISkillBlockProps>()
 </script>
 
 <template>
-	<div class="flex flex-col gap-5">
-		<h3>{{ title }}</h3>
-		<ul class="grid grid-cols-3 gap-2">
+	<div>
+		<Title :variant="3" class="mb-5">{{ title }}</Title>
+		<ul class="grid grid-cols-2 gap-2 md:grid-cols-3">
 			<li
 				v-for="item in data"
 				:key="item.title"
-				class="group relative cursor-pointer overflow-hidden rounded bg-white/10 p-5"
+				class="group relative cursor-pointer overflow-hidden rounded bg-white/10 p-2"
 			>
-				<h4 class="mb-5 text-xl">{{ item.title }}</h4>
-				<img :src="item.image" />
+				<Title :variant="4" class="mb-5">{{ item.title }}</Title>
+				<img :src="item.image" class="w-20" />
 				<div
 					class="bg-primary absolute bottom-0 left-0 h-full w-full translate-y-full p-3 text-sm transition-all duration-300 group-hover:translate-y-0"
 				>

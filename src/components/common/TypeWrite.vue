@@ -22,7 +22,9 @@ onMounted(() => {
 </script>
 
 <template>
-	<div class="overflow-hidden text-[50px] whitespace-nowrap">
+	<div
+		class="overflow-hidden text-2xl whitespace-nowrap sm:text-4xl md:text-5xl"
+	>
 		{{ displayText }}
 		<span v-if="isActiveCursor" class="cursor">|</span>
 	</div>

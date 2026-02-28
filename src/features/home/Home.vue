@@ -8,7 +8,7 @@ import Skills from './Skills.vue'
 
 <template>
 	<Banner />
-	<Container>
+	<Container class="flex flex-col gap-10 pb-20 sm:pb-10 md:gap-10">
 		<About id="about" />
 		<Skills id="skills" />
 		<Projects id="projects" />

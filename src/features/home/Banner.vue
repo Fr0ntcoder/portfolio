@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import TypeWrite from '../../components/common/TypeWrite.vue'
+import { ArrowDown } from 'lucide-vue-next'
 
 const showSecond = ref<boolean>(false)
 </script>
 
 <template>
 	<div
-		class="object-сover relative -mt-20 h-screen w-full bg-center bg-no-repeat"
+		class="object-сover relative -mt-20 h-screen w-full overflow-hidden bg-center bg-no-repeat"
 		:style="{ backgroundImage: 'url(\'bg-img.jpg\')' }"
 	>
 		<div
@@ -23,6 +24,15 @@ const showSecond = ref<boolean>(false)
 				text="И я Fullstack-разработчик"
 				:is-active-cursor="showSecond"
 			/>
+		</div>
+		<div class="absolute bottom-10 left-0 flex w-full justify-center">
+			<a
+				v-scroll-to="`#about`"
+				href="#about"
+				class="animate-scroll-pulse text-primary flex h-10 w-10 items-center justify-center rounded-full bg-white"
+			>
+				<ArrowDown />
+			</a>
 		</div>
 	</div>
 </template>

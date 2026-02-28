@@ -1,14 +1,17 @@
-<script setup></script>
+<script setup lang="ts">
+import SocialList from '../../components/common/SocialList.vue'
+import Title from '../../components/ui/Title.vue'
+</script>
 
 <template>
-	<div class="mb-20 pt-20">
-		<div class="grid grid-cols-3 gap-5">
-			<div
-				class="col-span-2 flex flex-col gap-5 text-xl"
-				data-aos="fade-right"
-				data-aos-anchor-placement="center-center"
-			>
-				<h2>Обо мне</h2>
+	<div class="pt-10 sm:grid sm:grid-cols-3 sm:gap-5">
+		<div
+			class="col-span-2 mb-8 sm:mb-0"
+			data-aos="fade-right"
+			data-aos-anchor-placement="top-center"
+		>
+			<Title :variant="2" class="mb-5">Обо мне</Title>
+			<div class="mb-8 flex flex-col gap-4 md:text-xl">
 				<p>
 					Привет! Я fullstack‑разработчик, создающий современные и удобные
 					веб‑приложения. Мне нравится превращать дизайн в живой интерфейс,
@@ -36,15 +39,16 @@
 					приносят людям пользу.
 				</p>
 			</div>
-			<div class="col-span-1 overflow-hidden rounded">
-				<img
-					src="/profile-img.jpg"
-					alt="Фото"
-					class="w-full"
-					data-aos="fade-left"
-					data-aos-anchor-placement="center-center"
-				/>
-			</div>
+			<SocialList />
+		</div>
+		<div class="overflow-hidden rounded sm:col-span-1">
+			<img
+				src="/profile-img.jpg"
+				alt="Фото"
+				class="w-full"
+				data-aos="fade-left"
+				data-aos-anchor-placement="center-center"
+			/>
 		</div>
 	</div>
 </template>

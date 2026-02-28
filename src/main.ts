@@ -7,7 +7,10 @@ import App from './App.vue'
 import { router } from './router'
 import './style.css'
 
-AOS.init()
+AOS.init({
+	once: true,
+	mirror: false
+})
 
 const app = createApp(App)
 app.use(createPinia())

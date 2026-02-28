@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Title from '../../components/ui/Title.vue'
 import { ISkillsData } from '../../types'
 import SkillBlock from './SkillBlock.vue'
 
@@ -132,26 +133,26 @@ const dataTools: ISkillsData[] = [
 </script>
 
 <template>
-	<div class="mb-20 pt-5">
-		<h2 class="mb-5">Мои навыки</h2>
+	<div>
+		<Title :variant="2" class="mb-5">Мои навыки</Title>
 		<div class="flex flex-col gap-5">
 			<SkillBlock
 				title="Frontend"
 				:data="dataFrontend"
 				data-aos="zoom-in"
-				data-aos-anchor-placement="center-center"
+				data-aos-anchor-placement="top-center"
 			/>
 			<SkillBlock
 				title="Backend"
 				:data="dataBackend"
 				data-aos="zoom-in"
-				data-aos-anchor-placement="center-center"
+				data-aos-anchor-placement="top-center"
 			/>
 			<SkillBlock
 				title="Инструменты"
 				:data="dataTools"
 				data-aos="zoom-in"
-				data-aos-anchor-placement="center-center"
+				data-aos-anchor-placement="top-center"
 			/>
 		</div>
 	</div>

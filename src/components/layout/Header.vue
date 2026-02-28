@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Mail } from 'lucide-vue-next'
 import Logo from '../common/Logo.vue'
+import MobileMenu from '../common/MobileMenu.vue'
 import Navigation from '../common/Navigation.vue'
 import Container from '../ui/Container.vue'
 </script>
@@ -11,8 +12,11 @@ import Container from '../ui/Container.vue'
 	>
 		<Container class="flex items-center justify-between">
 			<Logo />
-			<Navigation />
-			<a href="mailto:creativ4lk@vk.com" class="flex items-center gap-2"
+			<Navigation class="hidden sm:flex" />
+			<MobileMenu class="sm:hidden" />
+			<a
+				href="mailto:creativ4lk@vk.com"
+				class="hidden items-center gap-2 sm:flex"
 				><Mail />creativ4lk@vk.com</a
 			>
 		</Container>
