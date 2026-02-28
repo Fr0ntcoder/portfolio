@@ -1,5 +1,23 @@
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { createPinia } from 'pinia'
 import { createApp } from 'vue'
-import './style.css'
+import VueScrollTo from 'vue-scrollto'
 import App from './App.vue'
+import { router } from './router'
+import './style.css'
 
-createApp(App).mount('#app')
+AOS.init({
+	once: true,
+	mirror: false
+})
+
+const app = createApp(App)
+app.use(createPinia())
+app.use(VueScrollTo, {
+	offset: -80
+})
+
+app.use(router)
+
+app.mount('#app')
